@@ -84,12 +84,14 @@ set mouse-=a
 set selection=inclusive
 set selectmode=mouse,key
 
-" 去掉输入错误的提示声音
+" enable setting title
 set title
-set novisualbell
-set noerrorbells
-set t_vb=
+
 set tm=500
+
+" 去掉输入错误的提示声音
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 set viminfo^=%
 
