@@ -530,7 +530,7 @@ function! AutoSetFileHead()
     if &filetype == 'sh'
         call setline(1, "\#!/bin/bash")
         let nend = SetComment(2, "\#")
-        call setline(nend+1, "source ~/DRY_STUDIO/Bash/woformat/woformat.sh")
+        call setline(nend+1, "source /home/chwei/mc/bash/woformat/woformat.sh")
         call setline(nend+2, "")
         normal G
     endif
@@ -579,7 +579,7 @@ function! AutoSetFileHead()
         let nend = SetComment(1, "\/\/")
         call setline(nend+1, "\/\/ this is a cern root script")
         call setline(nend+2, "void ".expand("%:t:r")."() {")
-        call setline(nend+3, "  gInterpreter->ProcessLine(\".X /home/weicc/DRY_STUDIO/ROOT/gStyle/setstyle.C\");")
+        call setline(nend+3, "  gInterpreter->ProcessLine(\".X /home/chwei/mc/root/gStyle/setstyle.C\");")
         call setline(nend+4, "")
         call setline(nend+5, "}")
         normal G
