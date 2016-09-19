@@ -241,7 +241,8 @@ let g:airline_symbols.branch = '⎇'
 " Themes of vim-airline
 Plugin 'vim-airline/vim-airline-themes'
 set t_Co=256
-let g:airline_theme="cool"
+let g:airline_theme="light"
+" let g:airline_theme="cool"
 " let g:airline_theme="badwolf"
 " let g:airline_theme="base16_ashes"
 " let g:airline_theme="base16_twilight"
