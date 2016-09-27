@@ -504,8 +504,10 @@ endfunc
 " 保存时，如果文件发生修改，自动保存时间
 function! LastMod()
   if &modified
+    let a:cursor_pos = getpos(".")
     let l:nlines = line("$") > 10 ? 10 : line("$")
     exe "1,".l:nlines."g/Last Modified: /s/Last Modified: .*/Last Modified: ".strftime("%c")
+    call setpos('.', a:cursor_pos)
   endif
 endfunc
 
