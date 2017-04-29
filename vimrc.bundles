@@ -357,5 +357,15 @@ let g:tagbar_type_ruby = {
 
 " ################### latex ###################
 Plugin 'lervag/vimtex'
+let g:vimtex_compiler_callback_hooks = ['MyTestHook']
+function! MyTestHook(status)
+  echom a:status
+endfunction
+
+let g:vimtex_view_method = 'zathura'
+nmap <special><F2> <plug>(vimtex-compile)
+nmap <special><F3> <plug>(vimtex-view)
+nmap <special><F4> <plug>(vimtex-info)
+
 
 call vundle#end()            " required
