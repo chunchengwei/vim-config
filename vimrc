@@ -16,6 +16,7 @@
 " 配置leader键
 let mapleader = ','
 let g:mapleader = ','
+" let g:maplocalleader = '.'
 
 " 开启语法高亮
 syntax on
