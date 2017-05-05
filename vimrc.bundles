@@ -133,6 +133,9 @@ let g:NERDSpaceDelims=1
 " 快速加入修改环绕字符
 " Plugin 'tpope/vim-surround'
 
+" . to repeat command
+Plugin 'tpope/vim-repeat'
+
 " 快速去行尾空格 [, + <Space>]
 Plugin 'bronson/vim-trailing-whitespace'
 map <leader><space> :FixWhitespace<cr>
