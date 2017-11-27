@@ -103,31 +103,31 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
 " 解决复制粘贴代码错乱的问题
-function! WrapForTmux(s)
-    if !exists('$TMUX')
-        return a:s
-    endif
-    let tmux_start = "\<Esc>Ptmux;"
-    let tmux_end = "\<Esc>\\"
-    return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
-endfunction
-let &t_SI .= WrapForTmux("\<Esc>[?2004h")
-let &t_EI .= WrapForTmux("\<Esc>[?2004l")
-function! XTermPasteBegin()
-    set pastetoggle=<Esc>[201~
-    set paste
-    return "
-endfunction
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()]"]])]")
+" function! WrapForTmux(s)
+    " if !exists('$TMUX')
+        " return a:s
+    " endif
+    " let tmux_start = "\<Esc>Ptmux;"
+    " let tmux_end = "\<Esc>\\"
+    " return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
+" endfunction
+" let &t_SI .= WrapForTmux("\<Esc>[?2004h")
+" let &t_EI .= WrapForTmux("\<Esc>[?2004l")
+" function! XTermPasteBegin()
+    " set pastetoggle=<Esc>[201~
+    " set paste
+    " return "
+" endfunction
+" inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()]"]])]")
 
 " 兼容tmux模式的cursor变换
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+" if exists('$TMUX')
+    " let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+    " let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+" else
+    " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+    " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" endif
 
 
 
