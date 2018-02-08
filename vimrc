@@ -515,13 +515,13 @@ endfunc
 " 注释
 function! SetComment(n, sign)
 
-    call setline(a:n, a:sign."******************************************************************************")
+    call setline(a:n, a:sign." *****************************************************************************")
     call setline(a:n+1, a:sign." File Name: ".expand("%:t"))
     call setline(a:n+2, a:sign." Author: Chuncheng Wei")
     call setline(a:n+3, a:sign." Mail: weicc1989@gmail.com")
     call setline(a:n+4, a:sign." Created Time : ".strftime("%c"))
     call setline(a:n+5, a:sign." Last Modified: ".strftime("%c"))
-    call setline(a:n+6, a:sign."******************************************************************************")
+    call setline(a:n+6, a:sign." *****************************************************************************")
     call setline(a:n+7, "")
     return a:n+7
 endfunc
