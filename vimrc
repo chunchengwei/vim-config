@@ -473,6 +473,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 " ================== 文件类型设置  ==================
 
 " Python 文件的一般设置，比如不要 tab 等
+autocmd FileType python setlocal foldmethod=indent
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 
@@ -540,7 +541,7 @@ function! AutoSetFileHead()
 
     "如果文件类型为python
     if &filetype == 'python'
-        call setline(1, "\#!/home/weicc/.pyenv/shims/python")
+        call setline(1, "\#!/usr/bin/env python")
         call setline(2, "\# encoding: utf-8")
         let nend = SetComment(3, "\#")
         call setline(nend+1, "")
@@ -549,7 +550,7 @@ function! AutoSetFileHead()
 
     "如果文件类型为ruby
     if &filetype == 'ruby'
-        call setline(1, "\#!/home/weicc/.rbenv/shims/ruby")
+        call setline(1, "\#!/usr/bin/env ruby")
         call setline(2, "\# encoding: utf-8")
         let nend = SetComment(3, "\#")
         call setline(nend+1, "")
