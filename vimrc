@@ -493,7 +493,7 @@ autocmd BufNewFile *.h,*.cc,*.C,*.sh,*.py,*.rb exec ":call AutoSetFileHead()"
 autocmd BufWritePre *.h,*.cc,*.C,*.sh,*.py,*.rb exec ":call LastMod()"
 
 " 给.rb文件和.sh文件自动添加执行权限
-autocmd BufWritePost *.sh,*.rb,*.py exec ":call SetExecutable()"
+autocmd BufWritePost *.sh,*.rb exec ":call SetExecutable()"
 
 " 检查当前文件并设置可执行权限
 function! SetExecutable()
