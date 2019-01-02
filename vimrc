@@ -215,9 +215,9 @@ set smartindent
 set autoindent
 
 " tab相关变更
-set tabstop=2     " 设置Tab键的宽度
-set shiftwidth=2  " 每一次缩进对应的空格数
-set softtabstop=2 " 按退格键时可以一次删掉 4 个空格
+set tabstop=4     " 设置Tab键的宽度
+set shiftwidth=4  " 每一次缩进对应的空格数
+set softtabstop=4 " 按退格键时可以一次删掉 4 个空格
 set smarttab      " 按退格键时可以一次删掉 4 个空格
 set expandtab     " 将Tab自动转化成空格
 set shiftround    " 缩进时，取整
