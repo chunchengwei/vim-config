@@ -487,7 +487,7 @@ endfun
 autocmd FileType c,cpp,java,go,php,javascript,puppet,python,ruby,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " 定义函数AutoSetFileHead，自动插入文件头
-autocmd BufNewFile *.h,*.cc,*.C,*.sh,*.py,*.rb exec ":call AutoSetFileHead()"
+" autocmd BufNewFile *.h,*.cc,*.C,*.sh,*.py,*.rb exec ":call AutoSetFileHead()"
 
 " 定义函数LastMod，自动保存修改文件时间
 autocmd BufWritePre *.h,*.cc,*.C,*.sh,*.py,*.rb exec ":call LastMod()"
